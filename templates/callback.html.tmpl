@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <title>Callback</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <table>
+          <tr>
+            <td>AccessToken</td>
+            <td>
+              <i>{{ .Token.AccessToken }}</i>
+            </td>
+          </tr>
+          <tr>
+            <td>Token Type</td>
+            <td>{{ .Token.TokenType }}</td>
+          </tr>
+          <tr>
+            <td>RefreshToken</td>
+            <td>{{ .Token.RefreshToken }}</td>
+          </tr>
+          <tr>
+            <td>Expiry</td>
+            <td>{{ .Token.Expiry }}</td>
+          </tr>
+          <tr>
+            <td>Infinite Token</td>
+            <td>{{ .Token.Expiry.IsZero }}</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <p>
+          The Vercel integration configuation id is <pre>{{ .ConfigurationID }}</pre>
+        </p>
+        <p>
+          <a href="{{ .Next }}">Click here to go back to vercel and finish the install</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
