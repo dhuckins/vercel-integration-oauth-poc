@@ -1,4 +1,4 @@
-# vercel-integration-oauth-test
+# vercel-integration-oauth-poc
 
 # How to run
 
