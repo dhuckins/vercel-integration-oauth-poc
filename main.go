@@ -3,6 +3,7 @@ package main
 import (
 	"embed"
 	"html/template"
+	"log"
 	"net/http"
 
 	_ "github.com/joho/godotenv/autoload"
@@ -64,6 +65,7 @@ func main() {
 	mux.HandleFunc("/vercel/callback", callbackHandler(tmpl))
 	mux.HandleFunc("/vercel/configuration", configurationHandler(tmpl))
 
+	log.Println("serving on http://localhost:8000")
 	if err := http.ListenAndServe(":8000", mux); err != nil {
 		panic(err)
 	}
